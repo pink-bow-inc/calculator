@@ -1,4 +1,4 @@
-var showWorkingOut:Boolean = false
+var debugMode:Boolean = true
 var isInSettingsMode:Boolean = false
 fun settingsMode() {
     isInSettingsMode = !isInSettingsMode
@@ -6,7 +6,7 @@ fun settingsMode() {
     while (isInSettingsMode) {
         when (readln()) {
             "Settings Mode" -> settingsMode()
-            "showWorkingOut" -> showWorkingOut = readln().toBoolean()
+            "debugMode" -> debugMode = readln().toBoolean()
 
         }
     }

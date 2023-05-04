@@ -1,21 +1,21 @@
 package questions.cartesianPlane
 
-import showWorkingOut
+import debugMode
 
 fun slope(){
-    println("type your coronets individually and pressing enter after every number")
+    println("type your coronets individually and pressing enter after every number. in this order 'x1 y1 x2 y2'")
 
     val cords = arrayOf<Float>(readln().toFloat(),readln().toFloat(),readln().toFloat(),readln().toFloat())
 
-    val answer = (cords[3] - cords[1])/(cords[0]-cords[2])
+    val answer = (cords[3] - cords[1])/(cords[2]-cords[0])
 
     println("----------------------------------------------")
     println(answer)
     println("----------------------------------------------")
-    if (showWorkingOut) {
+    if (debugMode) {
 
         println("working out")
         println("----------------------------------------------")
-        println("(" + cords[3] + "-" + cords[1]+ ")" + "/" + "(" + cords[3] + "-" + cords[1]+ ") = " + answer)
+        println("(" + cords[3] + "-" + cords[1]+ ")" + "/" + "(" + cords[2] + "-" + cords[0]+ ") = " + answer)
     }
 }

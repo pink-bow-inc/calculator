@@ -1,9 +1,9 @@
 package questions.cartesianPlane
 
-import showWorkingOut
+import debugMode
 
 fun midPoint(){
-    println("type your coronets individually and pressing enter after every number")
+    println("type your coronets individually and pressing enter after every number. in this order 'x1 y1 x2 y2'")
 
     val cords = arrayOf<Float>(readln().toFloat(),readln().toFloat(),readln().toFloat(),readln().toFloat())
 
@@ -13,7 +13,7 @@ fun midPoint(){
     println("----------------------------------------------")
     println("$answerP1,$answerP2")
     println("----------------------------------------------")
-    if (showWorkingOut) {
+    if (debugMode) {
 
         println("working out")
         println("----------------------------------------------")
