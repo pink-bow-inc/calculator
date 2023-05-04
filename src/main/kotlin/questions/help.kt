@@ -8,7 +8,7 @@ fun help(){
     println("----------------------------------------------")
     println("cartesian plane")
     when (readln()) {
-        "cartesian plane" -> helpMaker("Cartesian Plane", arrayOf("length","Midpoint","gradient(slope)"))
+        "cartesian plane" -> helpMaker("Cartesian Plane", arrayOf("length","midpoint","gradient(slope)"))
     }
 }
 
