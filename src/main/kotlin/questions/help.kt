@@ -3,7 +3,7 @@ package questions
 import i
 
 fun help(){
-    val CartesianPlane = arrayOf("length","Midpoint","gradient(slope)")
+    val cartesianPlane = arrayOf("length","Midpoint","gradient(slope)")
 
 
     println("----------------------------------------------")
@@ -11,7 +11,7 @@ fun help(){
     println("----------------------------------------------")
     println("cartesian plane?")
     when (readln()) {
-        "cartesian plane" -> helpMaker("Cartesian Plane", CartesianPlane)
+        "cartesian plane" -> helpMaker("Cartesian Plane", cartesianPlane)
     }
 
 }
