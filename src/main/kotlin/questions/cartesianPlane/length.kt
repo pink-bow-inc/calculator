@@ -16,7 +16,7 @@ fun length(){
     println("----------------------------------------------")
     if (debugMode) {
 
-        println("working out")
+        println("debug")
         println("----------------------------------------------")
         println("sqrt((" + cords[2] + " - " + cords[0] + ")^2+(" + cords[3] + " - " + cords[1] + ")^2) = " + answer)
     }

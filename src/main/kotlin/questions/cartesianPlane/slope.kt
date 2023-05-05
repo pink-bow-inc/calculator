@@ -14,7 +14,7 @@ fun slope(){
     println("----------------------------------------------")
     if (debugMode) {
 
-        println("working out")
+        println("debug")
         println("----------------------------------------------")
         println("(" + cords[3] + "-" + cords[1]+ ")" + "/" + "(" + cords[2] + "-" + cords[0]+ ") = " + answer)
     }

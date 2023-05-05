@@ -15,7 +15,7 @@ fun midPoint(){
     println("----------------------------------------------")
     if (debugMode) {
 
-        println("working out")
+        println("debug")
         println("----------------------------------------------")
         println("(" + cords[0] + "+" + cords[2] + ")/2" + "," + "(" + cords[1] + "+" + cords[3] + ")/2 = " + "$answerP1,$answerP2")
     }
