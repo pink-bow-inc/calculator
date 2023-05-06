@@ -56,10 +56,7 @@ fun cartesianPlaneMode() {
                     sqrt((cords[2] - cords[0]).pow(2) + (cords[3] - cords[1]).pow(2)).toString(),
                     "sqrt((" + cords[2] + " - " + cords[0] + ")^2+(" + cords[3] + " - " + cords[1] + ")^2) = "
                 )
-
             }
-
-
         }
     }
 }

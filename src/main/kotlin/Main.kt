@@ -1,12 +1,9 @@
-
 import questions.cartesianPlaneMode
-
-var debugMode:Boolean = true
-
 fun main() {
     while (1==1) {
         when (readln()) {
-            "help" -> helpMaker("LIST OF ALL CATEGORY'S", arrayOf("cartesian plane"))
+            "help" -> helpMaker("LIST OF ALL CATEGORY'S",
+                arrayOf("cartesian plane"))
             "debug" -> debugMode = !debugMode
             "cartesian plane" -> cartesianPlaneMode()
 
@@ -14,4 +11,5 @@ fun main() {
     }
 }
 
+var debugMode:Boolean = true
 var i = 0
