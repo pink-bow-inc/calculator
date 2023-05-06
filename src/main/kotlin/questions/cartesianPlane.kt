@@ -1,6 +1,8 @@
 package questions
 
 import debugMode
+import helpMaker
+import questionAssist
 import kotlin.math.pow
 import kotlin.math.sqrt
 
@@ -16,29 +18,44 @@ fun cartesianPlaneMode() {
         when (readln()) {
             "cartesianPlaneMode" -> cartesianPlaneMode()
             "debug" -> debugMode = !debugMode
-            "help" -> helpMaker("Here is a list of all possible functions", arrayOf("slope","midPoint","length","all"))
+            "help" -> helpMaker(
+                "Here is a list of all possible functions",
+                arrayOf("slope", "midPoint", "length", "all")
+            )
 
-            "slope" -> questionAssist(((cords[3] - cords[1])/(cords[2]-cords[0])).toString(),
-                "(" + cords[3] + "-" + cords[1]+ ")" + "/" + "(" + cords[2] + "-" + cords[0]+ ") = ")
+            "slope" -> questionAssist(
+                ((cords[3] - cords[1]) / (cords[2] - cords[0])).toString(),
+                "(" + cords[3] + "-" + cords[1] + ")" + "/" + "(" + cords[2] + "-" + cords[0] + ") = "
+            )
 
-            "midPoint" -> questionAssist(((cords[0] + cords[2])/2).toString() + (cords[1] + cords[3])/2,
-                "(" + cords[0] + "+" + cords[2] + ")/2" + "," + "(" + cords[1] + "+" + cords[3] + ")/2 = ")
+            "midPoint" -> questionAssist(
+                ((cords[0] + cords[2]) / 2).toString() + (cords[1] + cords[3]) / 2,
+                "(" + cords[0] + "+" + cords[2] + ")/2" + "," + "(" + cords[1] + "+" + cords[3] + ")/2 = "
+            )
 
-            "length" -> questionAssist(sqrt((cords[2] - cords[0]).pow(2)+(cords[3] - cords[1]).pow(2)).toString(),
-                "sqrt((" + cords[2] + " - " + cords[0] + ")^2+(" + cords[3] + " - " + cords[1] + ")^2) = ")
+            "length" -> questionAssist(
+                sqrt((cords[2] - cords[0]).pow(2) + (cords[3] - cords[1]).pow(2)).toString(),
+                "sqrt((" + cords[2] + " - " + cords[0] + ")^2+(" + cords[3] + " - " + cords[1] + ")^2) = "
+            )
 
             "all" -> {
                 println("slope =")
-                questionAssist(((cords[3] - cords[1])/(cords[2]-cords[0])).toString(),
-                    "(" + cords[3] + "-" + cords[1]+ ")" + "/" + "(" + cords[2] + "-" + cords[0]+ ") = ")
+                questionAssist(
+                    ((cords[3] - cords[1]) / (cords[2] - cords[0])).toString(),
+                    "(" + cords[3] + "-" + cords[1] + ")" + "/" + "(" + cords[2] + "-" + cords[0] + ") = "
+                )
 
                 println("midPoint = ")
-                questionAssist(((cords[0] + cords[2])/2).toString() + (cords[1] + cords[3])/2,
-                    "(" + cords[0] + "+" + cords[2] + ")/2" + "," + "(" + cords[1] + "+" + cords[3] + ")/2 = ")
+                questionAssist(
+                    ((cords[0] + cords[2]) / 2).toString() + (cords[1] + cords[3]) / 2,
+                    "(" + cords[0] + "+" + cords[2] + ")/2" + "," + "(" + cords[1] + "+" + cords[3] + ")/2 = "
+                )
 
                 println("length = ")
-                questionAssist(sqrt((cords[2] - cords[0]).pow(2)+(cords[3] - cords[1]).pow(2)).toString(),
-                    "sqrt((" + cords[2] + " - " + cords[0] + ")^2+(" + cords[3] + " - " + cords[1] + ")^2) = ")
+                questionAssist(
+                    sqrt((cords[2] - cords[0]).pow(2) + (cords[3] - cords[1]).pow(2)).toString(),
+                    "sqrt((" + cords[2] + " - " + cords[0] + ")^2+(" + cords[3] + " - " + cords[1] + ")^2) = "
+                )
 
             }
 

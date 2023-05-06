@@ -1,6 +1,5 @@
 
 import questions.cartesianPlaneMode
-import questions.help
 
 var debugMode:Boolean = true
 

@@ -1,8 +1,3 @@
-package questions
-
-import debugMode
-import i
-
 fun help(){
     println("----------------------------------------------")
     println("HERE IS A LIST OF TOPICS")
