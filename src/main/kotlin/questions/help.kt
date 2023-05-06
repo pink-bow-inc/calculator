@@ -1,26 +1,40 @@
 package questions
 
+import debugMode
 import i
 
 fun help(){
     println("----------------------------------------------")
-    println("WHAT TOPIC DO YOU NEED HELP WITH?")
+    println("HERE IS A LIST OF TOPICS")
     println("----------------------------------------------")
     println("cartesian plane")
-    when (readln()) {
-        "cartesian plane" -> helpMaker("Cartesian Plane", arrayOf("length","midpoint","gradient(slope)"))
-    }
+
 }
 
-private fun helpMaker(groupName: String,array: Array<String>) {
+fun questionAssist(answer: String,debug: String) {
     println("----------------------------------------------")
-    println(groupName.uppercase())
+    println(answer)
+    println("----------------------------------------------")
+
+    if (debugMode) {
+        println("debug")
+        println("----------------------------------------------")
+        println(debug + answer)
+        println("----------------------------------------------")
+
+    }
+    println("")
+}
+
+fun helpMaker(display: String,array: Array<String>) {
+    println("----------------------------------------------")
+    println(display.uppercase())
     println("----------------------------------------------")
     arrayPrinter(array)
     println("----------------------------------------------")
 }
 
-private fun arrayPrinter( array: Array<String>){
+fun arrayPrinter( array: Array<String>){
     while (i != array.size) {
         println(array[i])
         i++
