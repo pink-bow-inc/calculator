@@ -1,11 +1,3 @@
-fun help(){
-    println("----------------------------------------------")
-    println("HERE IS A LIST OF TOPICS")
-    println("----------------------------------------------")
-    println("cartesian plane")
-
-}
-
 fun questionAssist(answer: String,debug: String) {
     println("----------------------------------------------")
     println(answer)
