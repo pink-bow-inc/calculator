@@ -11,5 +11,5 @@ fun main() {
     }
 }
 
-var debugMode:Boolean = true
+var debugMode:Boolean = false
 var i = 0
