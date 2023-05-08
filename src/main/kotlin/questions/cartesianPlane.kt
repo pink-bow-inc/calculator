@@ -11,9 +11,7 @@ fun cartesianPlaneMode() {
     cartesianPlane = !cartesianPlane
 
     while (cartesianPlane) {
-        println("type your coronets individually and pressing enter after every number. in this order 'x1 y1 x2 y2'")
 
-        val cords = arrayOf<Float>(readln().toFloat(),readln().toFloat(),readln().toFloat(),readln().toFloat())
 
         when (readln()) {
             "cartesianPlaneMode" -> cartesianPlaneMode()
@@ -23,40 +21,46 @@ fun cartesianPlaneMode() {
                 arrayOf("slope", "midPoint", "length", "all")
             )
 
-            "slope" -> questionAssist(
-                ((cords[3] - cords[1]) / (cords[2] - cords[0])).toString(),                                   //answer to the question
-                "(" + cords[3] + "-" + cords[1] + ")" + "/" + "(" + cords[2] + "-" + cords[0] + ") = " //expanded working out
-            )
+            "slope" -> slope(inputCoordinates())
 
-            "midPoint" -> questionAssist(
-                ((cords[0] + cords[2]) / 2).toString() + (cords[1] + cords[3]) / 2,                        //answer to the question
-                "(" + cords[0] + "+" + cords[2] + ")/2" + "," + "(" + cords[1] + "+" + cords[3] + ")/2 = " //expanded working out
-            )
+            "midPoint" -> midPoint(inputCoordinates())
 
-            "length" -> questionAssist(
-                sqrt((cords[2] - cords[0]).pow(2) + (cords[3] - cords[1]).pow(2)).toString(),            //answer to the question
-                "sqrt((" + cords[2] + " - " + cords[0] + ")^2+(" + cords[3] + " - " + cords[1] + ")^2) = " //expanded working out
-            )
+            "length" -> length(inputCoordinates())
 
             "all" -> {
+                val coordinates = inputCoordinates()
+
                 println("slope =")
-                questionAssist(
-                    ((cords[3] - cords[1]) / (cords[2] - cords[0])).toString(),                                   //answer to the question
-                    "(" + cords[3] + "-" + cords[1] + ")" + "/" + "(" + cords[2] + "-" + cords[0] + ") = " //expanded working out
-                )
+                slope(coordinates)
 
                 println("midPoint = ")
-                questionAssist(
-                    ((cords[0] + cords[2]) / 2).toString() + (cords[1] + cords[3]) / 2,                       //answer to the question
-                    "(" + cords[0] + "+" + cords[2] + ")/2" + "," + "(" + cords[1] + "+" + cords[3] + ")/2 = " //expanded working out
-                )
+                midPoint(coordinates)
 
                 println("length = ")
-                questionAssist(
-                    sqrt((cords[2] - cords[0]).pow(2) + (cords[3] - cords[1]).pow(2)).toString(),            //answer to the question
-                    "sqrt((" + cords[2] + " - " + cords[0] + ")^2+(" + cords[3] + " - " + cords[1] + ")^2) = " //expanded working out
-                )
+                length(coordinates)
             }
         }
     }
+}
+fun inputCoordinates(): Array<Float> {
+    println("type your coronets individually and pressing enter after every number. in this order 'x1 y1 x2 y2'")
+    return arrayOf<Float>(readln().toFloat(), readln().toFloat(), readln().toFloat(), readln().toFloat())
+}
+fun slope(input: Array<Float>){
+    questionAssist(
+        ((input[3] - input[1]) / (input[2] - input[0])).toString(),                                   //answer to the question
+        "(" + input[3] + "-" + input[1] + ")" + "/" + "(" + input[2] + "-" + input[0] + ") = " //expanded working out
+    )
+}
+fun midPoint(input: Array<Float>){
+    questionAssist(
+        ((input[0] + input[2]) / 2).toString() + (input[1] + input[3]) / 2,                        //answer to the question
+        "(" + input[0] + "+" + input[2] + ")/2" + "," + "(" + input[1] + "+" + input[3] + ")/2 = " //expanded working out
+    )
+}
+fun length(input: Array<Float>){
+    questionAssist(
+        sqrt((input[2] - input[0]).pow(2) + (input[3] - input[1]).pow(2)).toString(),            //answer to the question
+        "sqrt((" + input[2] + " - " + input[0] + ")^2+(" + input[3] + " - " + input[1] + ")^2) = " //expanded working out
+    )
 }
