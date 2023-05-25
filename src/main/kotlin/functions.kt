@@ -1,4 +1,4 @@
-fun questionAssist(answer: String,debug: String) {
+fun questionassistant(answer: String,debug: String,wantAnswerInDebug: Boolean) {
     println("----------------------------------------------")
     println(answer)
     println("----------------------------------------------")
@@ -6,21 +6,21 @@ fun questionAssist(answer: String,debug: String) {
     if (debugMode) {
         println("debug")
         println("----------------------------------------------")
-        println(debug + answer)
+        println(debug)
+        if (wantAnswerInDebug) {println(answer)}
         println("----------------------------------------------")
 
     }
     println("")
 }
 
-fun helpMaker(display: String,array: Array<String>) {
+fun helpMaker(array: Array<String>) {
     println("----------------------------------------------")
-    println(display.uppercase())
+    println("HERE IS A LIST OF ALL POSSIBLE FUNCTIONS")
     println("----------------------------------------------")
     arrayPrinter(array)
     println("----------------------------------------------")
 }
-
 fun arrayPrinter( array: Array<String>){
     while (i != array.size) {
         println(array[i])
@@ -28,3 +28,4 @@ fun arrayPrinter( array: Array<String>){
     }
     i = 0
 }
+

@@ -2,24 +2,18 @@ package questions
 
 import debugMode
 import helpMaker
-import questionAssist
+import questionassistant
 import kotlin.math.pow
 import kotlin.math.sqrt
 
 var cartesianPlane:Boolean = false
 fun cartesianPlaneMode() {
     cartesianPlane = !cartesianPlane
-
     while (cartesianPlane) {
-
-
         when (readln()) {
             "cartesianPlaneMode" -> cartesianPlaneMode()
             "debug" -> debugMode = !debugMode
-            "help" -> helpMaker(
-                "Here is a list of all possible functions",
-                arrayOf("slope", "midPoint", "length", "all")
-            )
+            "help" -> helpMaker(arrayOf("slope", "midPoint", "length", "all"))
 
             "slope" -> slope(inputCoordinates())
 
@@ -47,20 +41,20 @@ fun inputCoordinates(): Array<Float> {
     return arrayOf<Float>(readln().toFloat(), readln().toFloat(), readln().toFloat(), readln().toFloat())
 }
 fun slope(input: Array<Float>){
-    questionAssist(
+    questionassistant(
         ((input[3] - input[1]) / (input[2] - input[0])).toString(),                                   //answer to the question
-        "(" + input[3] + "-" + input[1] + ")" + "/" + "(" + input[2] + "-" + input[0] + ") = " //expanded working out
+        "(" + input[3] + "-" + input[1] + ")" + "/" + "(" + input[2] + "-" + input[0] + ") = ", true //expanded working out
     )
 }
 fun midPoint(input: Array<Float>){
-    questionAssist(
+    questionassistant(
         ((input[0] + input[2]) / 2).toString() + (input[1] + input[3]) / 2,                        //answer to the question
-        "(" + input[0] + "+" + input[2] + ")/2" + "," + "(" + input[1] + "+" + input[3] + ")/2 = " //expanded working out
+        "(" + input[0] + "+" + input[2] + ")/2" + "," + "(" + input[1] + "+" + input[3] + ")/2 = ", true//expanded working out
     )
 }
 fun length(input: Array<Float>){
-    questionAssist(
+    questionassistant(
         sqrt((input[2] - input[0]).pow(2) + (input[3] - input[1]).pow(2)).toString(),            //answer to the question
-        "sqrt((" + input[2] + " - " + input[0] + ")^2+(" + input[3] + " - " + input[1] + ")^2) = " //expanded working out
+        "sqrt((" + input[2] + " - " + input[0] + ")^2+(" + input[3] + " - " + input[1] + ")^2) = ",  true//expanded working out
     )
 }
